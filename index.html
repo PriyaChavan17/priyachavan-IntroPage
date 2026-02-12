@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Priya Chavan Introduction Page</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url("background.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+        .card {
+            background-color: #3b3939;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .profile-pic {
+            display: block;
+            margin: 0 auto 15px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ddd;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: white ;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 8px 0;
+            color: white;
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 15px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="profile"></div>
+
+<script>
+fetch("profile.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("profile").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
